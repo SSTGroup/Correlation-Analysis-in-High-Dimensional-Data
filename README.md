@@ -28,7 +28,7 @@ tanuj.hasija@sst.upb.de
 # References #
 ##############
 
-Y.Song, P.J.Schreier, D.Ramírez,and T.Hasija,“Canonicalcorrelation analysis of high-dimensional data with very small sample support,” 
+Y.Song, P.J.Schreier, D.Ramírez,and T.Hasija,“Canonical correlation analysis of high-dimensional data with very small sample support,” 
 Signal Processing, vol. 128, pp. 449–458, 2016.
 
 
