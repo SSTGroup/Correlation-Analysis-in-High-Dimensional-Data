@@ -1,46 +1,47 @@
-## ----------------------------------------------------------------------------
-##
-##   File: main.m
-##   Copyright (c) <2016> <University of Paderborn>
-##   Permission is hereby granted, free of charge, to any person
-##   obtaining a copy of this software and associated documentation
-##   files (the "Software"), to deal in the Software without restriction,
-##   including without limitation the rights to use, copy, modify and
-##   merge the Software, subject to the following conditions:
-##
-##   1.) The Software is used for non-commercial research and
-##       education purposes.
-##
-##   2.) The above copyright notice and this permission notice shall be
-##       included in all copies or substantial portions of the Software.
-##
-##   3.) Publication, Distribution, Sublicensing, and/or Selling of
-##       copies or parts of the Software requires special agreements
-##       with the University of Paderborn and is in general not permitted.
-##
-##   4.) Modifications or contributions to the software must be
-##       published under this license. The University of Paderborn
-##       is granted the non-exclusive right to publish modifications
-##       or contributions in future versions of the Software free of charge.
-##
-##   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-##   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-##   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-##   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-##   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-##   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-##   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-##   OTHER DEALINGS IN THE SOFTWARE.
-##
-##   Persons using the Software are encouraged to notify the
-##   Department of Communications Engineering at the University of Paderborn
-##   about bugs. Please reference the Software in your publications
-##   if it was used for them.
-##
-##
-##   Author: Tanuj Hasija
-##
-## ----------------------------------------------------------------------------
+% ## ----------------------------------------------------------------------------
+% ##
+% ##   File: main.m
+% ##   Copyright (c) <2016> <University of Paderborn>
+% ##   Permission is hereby granted, free of charge, to any person
+% ##   obtaining a copy of this software and associated documentation
+% ##   files (the "Software"), to deal in the Software without restriction,
+% ##   including without limitation the rights to use, copy, modify and
+% ##   merge the Software, subject to the following conditions:
+% ##
+% ##   1.) The Software is used for non-commercial research and
+% ##       education purposes.
+% ##
+% ##   2.) The above copyright notice and this permission notice shall be
+% ##       included in all copies or substantial portions of the Software.
+% ##
+% ##   3.) Publication, Distribution, Sublicensing, and/or Selling of
+% ##       copies or parts of the Software requires special agreements
+% ##       with the University of Paderborn and is in general not permitted.
+% ##
+% ##   4.) Modifications or contributions to the software must be
+% ##       published under this license. The University of Paderborn
+% ##       is granted the non-exclusive right to publish modifications
+% ##       or contributions in future versions of the Software free of charge.
+% ##
+% ##   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+% ##   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+% ##   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+% ##   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+% ##   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+% ##   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+% ##   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+% ##   OTHER DEALINGS IN THE SOFTWARE.
+% ##
+% ##   Persons using the Software are encouraged to notify the
+% ##   Signal and System Theory Group at the University of Paderborn
+% ##   about bugs. Please reference the Software in your publications
+% ##   if it was used for them.
+% ##
+% ##
+% ##   Author: Tanuj Hasija
+% ##
+% ## ----------------------------------------------------------------------------
+
 
 % MATLAB Implementation of the work - 
 % "Bootstrap-based Detection of the Number of Signals Correlated across
@@ -55,7 +56,7 @@ m1=14;m2=18;m3=20; m4=22; m5=24;% Total no of sensors in data sets
 Q = [Q1,Q2,Q3,Q4,Q5];
 m=[m1,m2,m3,m4,m5];
 
-var_1 = [1 1 1 1 1 1];  % Variance of sources in data sets
+var_1 = [1 1 1 1 1 1];  % Variance of source signals in data sets
 var_2 = [1 1 1 1 1 1];
 var_3 = [1 1 1 1 1 1];
 var_4 = [1 1 1 1 1 1];
@@ -65,35 +66,35 @@ M = 400; % Number of samples
 
 % Cross Correlation matrices satisfying the assumption in [6],[12] and [13]
 % i.e. d_ij = d for all (i,j) in {1,2,..L} and i != j
-R12 = diag([0.8,  0.8, 0,   0    0   0 ].*sqrt(var_1/2).*sqrt(var_2/2));
-R23 = diag([0.9,  0.9, 0  , 0    0   0 ].*sqrt(var_2/2).*sqrt(var_3/2));
-R31 = diag([0.8,  0.8, 0,   0    0   0 ].*sqrt(var_3/2).*sqrt(var_1/2));
-R14 = diag([0.85, 0.8, 0,   0,   0   0 ].*sqrt(var_1/2).*sqrt(var_4/2));
-R24 = diag([0.9,  0.8, 0,   0    0   0 ].*sqrt(var_2/2).*sqrt(var_4/2));
-R34 = diag([0.9,  0.8, 0,   0    0   0 ].*sqrt(var_3/2).*sqrt(var_4/2));
-R15 = diag([0.85, 0.8, 0,   0    0   0 ].*sqrt(var_1/2).*sqrt(var_5/2));
-R25 = diag([0.9,  0.75, 0,   0    0   0 ].*sqrt(var_2/2).*sqrt(var_5/2));
-R35 = diag([0.9,  0.8, 0,   0    0   0 ].*sqrt(var_3/2).*sqrt(var_5/2));
-R45 = diag([0.85, 0.8, 0,   0    0   0 ].*sqrt(var_4/2).*sqrt(var_5/2));
+% R12 = diag([0.8,  0.8, 0,   0    0   0 ].*sqrt(var_1/2).*sqrt(var_2/2));
+% R23 = diag([0.9,  0.9, 0  , 0    0   0 ].*sqrt(var_2/2).*sqrt(var_3/2));
+% R31 = diag([0.8,  0.8, 0,   0    0   0 ].*sqrt(var_3/2).*sqrt(var_1/2));
+% R14 = diag([0.85, 0.8, 0,   0,   0   0 ].*sqrt(var_1/2).*sqrt(var_4/2));
+% R24 = diag([0.9,  0.8, 0,   0    0   0 ].*sqrt(var_2/2).*sqrt(var_4/2));
+% R34 = diag([0.9,  0.8, 0,   0    0   0 ].*sqrt(var_3/2).*sqrt(var_4/2));
+% R15 = diag([0.85, 0.8, 0,   0    0   0 ].*sqrt(var_1/2).*sqrt(var_5/2));
+% R25 = diag([0.9,  0.75, 0,   0    0   0 ].*sqrt(var_2/2).*sqrt(var_5/2));
+% R35 = diag([0.9,  0.8, 0,   0    0   0 ].*sqrt(var_3/2).*sqrt(var_5/2));
+% R45 = diag([0.85, 0.8, 0,   0    0   0 ].*sqrt(var_4/2).*sqrt(var_5/2));
 
 % Cross Correlation matrices not satisfying the assumption in [6],[12] and [13]
-% R12 = diag([0.8,  0.8, 0.7,   0    0.7   0 ].*sqrt(var_1/2).*sqrt(var_2/2));
-% R23 = diag([0.9,  0.9, 0.5  , 0    0   0.6 ].*sqrt(var_2/2).*sqrt(var_3/2));
-% R31 = diag([0.8,  0.8, 0.7,   0    0   0.5 ].*sqrt(var_3/2).*sqrt(var_1/2));
-% R14 = diag([0.85, 0.8, 0.7,   0.7,   0   0 ].*sqrt(var_1/2).*sqrt(var_4/2));
-% R24 = diag([0.9,  0.8, 0.6,   0.6    0   0.6 ].*sqrt(var_2/2).*sqrt(var_4/2));
-% R34 = diag([0.9,  0.8, 0,   0    0.5   0.6 ].*sqrt(var_3/2).*sqrt(var_4/2));
-% R15 = diag([0.85, 0.8, 0,   0.7    0.5   0 ].*sqrt(var_1/2).*sqrt(var_5/2));
-% R25 = diag([0.9,  0.75, 0,   0    0.5   0.6 ].*sqrt(var_2/2).*sqrt(var_5/2));
-% R35 = diag([0.9,  0.8, 0,   0.5    0   0.5 ].*sqrt(var_3/2).*sqrt(var_5/2));
-% R45 = diag([0.85, 0.8, 0,   0.6    0.6   0.6 ].*sqrt(var_4/2).*sqrt(var_5/2));
+R12 = diag([0.8,  0.8, 0.7,   0    0.7   0 ].*sqrt(var_1/2).*sqrt(var_2/2));
+R23 = diag([0.9,  0.9, 0.5  , 0    0   0.6 ].*sqrt(var_2/2).*sqrt(var_3/2));
+R31 = diag([0.8,  0.8, 0.7,   0    0   0.5 ].*sqrt(var_3/2).*sqrt(var_1/2));
+R14 = diag([0.85, 0.8, 0.7,   0.7,   0   0 ].*sqrt(var_1/2).*sqrt(var_4/2));
+R24 = diag([0.9,  0.8, 0.6,   0.6    0   0.6 ].*sqrt(var_2/2).*sqrt(var_4/2));
+R34 = diag([0.9,  0.8, 0,   0    0.5   0.6 ].*sqrt(var_3/2).*sqrt(var_4/2));
+R15 = diag([0.85, 0.8, 0,   0.7    0.5   0 ].*sqrt(var_1/2).*sqrt(var_5/2));
+R25 = diag([0.9,  0.75, 0,   0    0.5   0.6 ].*sqrt(var_2/2).*sqrt(var_5/2));
+R35 = diag([0.9,  0.8, 0,   0.5    0   0.5 ].*sqrt(var_3/2).*sqrt(var_5/2));
+R45 = diag([0.85, 0.8, 0,   0.6    0.6   0.6 ].*sqrt(var_4/2).*sqrt(var_5/2));
 
 d = 2; % Number of signals correlated across all data sets
 
 B = 500; % Number of Bootstrap iterations
 alpha = 0.05; % Probability of false alarm
 
-num_iterations = 0.05*1e2; % Number of Monte Carlo trials
+num_iterations = 5*1e2; % Number of Monte Carlo trials
 SNR_Vector = [ -10:2.5:-5, -4 -3 -2.5 -1, 0:5:15 ];
 A= [sqrt(8) sqrt(1) sqrt(1) ]; % AR Noise Filter coefficient vector
 
@@ -124,7 +125,7 @@ for snr = 1:length(SNR_Vector)
         K = svd((Vx1'*Vx2)*(Vx2'*Vx3)*(Vx3'*Vx4)*(Vx4'*Vx5)*(Vx5'*Vx3)*(Vx3'*Vx1)*(Vx1'*Vx4)*(Vx4'*Vx2)*(Vx2'*Vx5)*(Vx5'*Vx1));
         
         % Bootstrap Operation
-        parfor b=1:B
+        for b=1:B
             
             [X1_star,I] = datasample(X1,M,2); % Bootstrap data matrix
             X2_star = X2(:,I);
@@ -189,14 +190,14 @@ for snr = 1:length(SNR_Vector)
     Prob_detection_Max_Min_5(snr) = length(find(Det_Max_Min_5 == d))/num_iterations;
     Prob_detection_Det_13(snr) = length(find(Det_13 == d))/num_iterations;
      
-    Mean_bt(snr) = mean(d_cap_bt)
+    Mean_bt(snr) = mean(d_cap_bt);
     Var_bt(snr) = var(d_cap_bt);
     
-    Mean_ITC_MDL(snr) = mean(Det_ITC_MDL)
+    Mean_ITC_MDL(snr) = mean(Det_ITC_MDL);
     Var_ITC_MDL(snr) = var(Det_ITC_MDL);
-    Mean_Max_Min_5(snr) = mean(Det_Max_Min_5)
+    Mean_Max_Min_5(snr) = mean(Det_Max_Min_5);
     Var_Max_Min_5(snr) = var(Det_Max_Min_5);
-    Mean_Det_13(snr) = mean(Det_13)
+    Mean_Det_13(snr) = mean(Det_13);
     Var_Det_13(snr) = var(Det_13);
     
 end
