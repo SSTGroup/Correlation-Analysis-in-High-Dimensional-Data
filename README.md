@@ -35,4 +35,6 @@ christian.lameiro@sst.upb.de
 
 [[2]](Cross-Validation/) C. Lameiro, and P. J. Schreier, “Cross-validation techniques for determining the number of correlated components between two data sets when the number of samples is very small,” Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
 
+[[3]](Bootstrap/) Tanuj Hasija, Yang Song, Peter J. Schreier and David Ramirez,“Bootstrap-based Detection of the Number of Signals Correlated across Multiple Data Sets,” Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
+
 
