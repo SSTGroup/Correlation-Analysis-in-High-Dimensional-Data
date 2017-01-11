@@ -102,10 +102,10 @@
 %% Initialization
 clc;clear;close all;
 RandStream.setGlobalStream(RandStream('mcg16807','seed',sum(100*clock)));
-nSim=1; % Number of Monte-Carlo simulations
+nSim=100; % Number of Monte-Carlo simulations
 
 %% Scenario specification
-scen='scen3';
+scen='scen1';
 switch lower(scen)
     case 'custom'
         n=20; % Data dimension in channel X
@@ -287,5 +287,7 @@ else
     fprintf('Probability of detection for 3Set-CV: %1.2f\n',mean(dEstCV3set==d,2));
     fprintf('Probability of detection for PCA-CV: %1.2f\n',mean(dEstCVpca==d,2));
     fprintf('Probability of detection for CV: %1.2f\n',mean(dEstCVstd==d,2));
+    fprintf('Probability of detection for Detector 2 from [6]: %1.2f\n',mean(dEstDet2==d,2));
+    fprintf('Probability of detection for Detector 3 from [6]: %1.2f\n',mean(dEstDet3==d,2));
 end
     
