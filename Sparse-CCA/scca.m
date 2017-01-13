@@ -351,4 +351,4 @@ for ii=1:r-1 % Obtain next r-1 columns of S and T
     S=[S s];
     T=[T t];
 end
-k=diag(S'*Rxy*T); % Estimated canonical correlations
+k=sort(diag(S'*Rxy*T),'descend'); % Estimated canonical correlations
