@@ -277,6 +277,9 @@ end
 fprintf('Simulation %i/%i\n',nSim,nSim);
 
 if sweepL>1
+    if strcmpi(wspace(sweepI).name,'d')
+        d=repmat(sweepVar',[1 nSim]);
+    end
     figure, plot(sweepVar,[mean(dEstCVxcov==d,2),mean(dEstCV3set==d,2),...
         mean(dEstCVpca==d,2),mean(dEstCVstd==d,2),mean(dEstDet2==d,2),mean(dEstDet3==d,2)]);
     xlabel(wspace(sweepI).label); ylabel('probability of detection');
