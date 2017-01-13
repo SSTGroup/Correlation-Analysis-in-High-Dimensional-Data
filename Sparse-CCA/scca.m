@@ -44,8 +44,7 @@
 %
 %
 %
-%   Matlab implementation of the sparse CCA techniques for
-%   model-order selection described in
+%   Matlab implementation of the sparse CCA algorithm described in
 %
 %   A sparse CCA algorithm with application to model-order selection for small sample support
 %   Christian Lameiro and Peter J. Schreier
