@@ -48,7 +48,7 @@
 %   model-order selection described in
 %
 %   A sparse CCA algorithm with application to model-order selection for small sample support
-%   Christian Lameiro, and Peter J. Schreier
+%   Christian Lameiro and Peter J. Schreier
 %   Proc. IEEE Int. Conf. Acoustics, Speech and Signal Process., New Orleans, LA, USA, March 2017
 %
 %   Call:
