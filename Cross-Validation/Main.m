@@ -79,7 +79,7 @@
 %   dimension and be provided as column vectors. Similarly, MAcoeff and
 %   ARcoeff must be column vectors if they are multidimensional. If there
 %   is a variable parameter, their different values must be provided along
-%   the second dimension (e.g., M=[10 20 30];). There are also some special
+%   the second dimension (e.g., M=[10 20 30];). There can be up to one variable parameter. There are also some special
 %   cases to consider:
 %
 %       - Use mn or nm as a variable when n=m is a variable
@@ -89,7 +89,7 @@
 %       components in both channels).
 %       - Use sigmad2 as a variable when sigmadx2=sigmady2 is a variable
 %       parameter.
-%       - Use sigmaf2 as a variable when sigmafx2-sigmafy2 is a variable
+%       - Use sigmaf2 as a variable when sigmafx2=sigmafy2 is a variable
 %       parameter.
 %       - When fx, fy or d are variable parameters, provide the
 %       corresponding variance and/or correlation coefficient for the
