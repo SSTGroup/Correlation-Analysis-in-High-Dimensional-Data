@@ -148,6 +148,13 @@ for r=rmin:rmax % We evaluate the error for all number of kept components
                 [~,index]=sort(real(diag(E)));
                 Fy=U(:,index(1:r));  % Fy update
                 diffFy=abs(1-min(svd(FyOld'*Fy))); % Difference between new and old Fy in terms of spanned subspace
+                
+                % Auxiliary matrices for fast computation of inner LOOCV
+                Aux=1/Mest*Yest'*Fy*(Fy'*Ryy*Fy)^-1*Fy'*Yest;
+                D1=diag(diag(Aux));
+                D2=diag(diag(eye(Mest)-Aux));
+                Ax=(Rxy*Fy*(Fy'*Ryy*Fy)^-1*Fy'*Yest-Xest*D1)*D2^-1;
+                Zx=(2*Xest-Ax)*Ax';
             end
             
             Exy=Xval-Fx*Fx'*Rxy*Fy*(Fy'*Ryy*Fy)^-1*Fy'*Yval; % Error estimating X from Y
