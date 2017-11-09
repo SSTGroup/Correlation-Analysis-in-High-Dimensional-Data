@@ -2,7 +2,7 @@
 %
 % "Determining the Dimension of the Improper Signal
 % Subspace in Complex-Valued Data" by Tanuj Hasija, Christian Lameiro and
-% Peter J. Schreier, Submitted in IEEE signal proceesing letters, July 2017
+% Peter J. Schreier, IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
 % 
 % and implementation of a detector of the paper - 
 %

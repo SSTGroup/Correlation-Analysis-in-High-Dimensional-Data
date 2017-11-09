@@ -1,4 +1,4 @@
-Files implementing the proposed and the competing detectors as described in the paper "Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data" by Tanuj Hasija, Christian Lameiro and Peter J. Schreier, In submission process, 2017
+Files implementing the proposed and the competing detectors as described in the paper "Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data" by Tanuj Hasija, Christian Lameiro and Peter J. Schreier, IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
 
 ###########
 
@@ -16,4 +16,4 @@ References
 
 ##############
 
-"Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data" by Tanuj Hasija, Christian Lameiro and Peter J. Schreier, In submission process, 2017
+"Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data" by Tanuj Hasija, Christian Lameiro and Peter J. Schreier, IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.

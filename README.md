@@ -39,4 +39,4 @@ christian.lameiro@sst.upb.de
 
 [[4]](Sparse-CCA/) C. Lameiro, and P. J. Schreier, “A sparse CCA algorithm with application to model-order selection for small sample support,” Proc. IEEE Int. Conf. Acoustics, Speech and Signal Process., New Orleans, LA, USA, March 2017.
 
-[[5]](Improper-Signal-Subpsace-Detection/) Tanuj Hasija,  Christian Lameiro and Peter J. Schreier ,“Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,” Submitted in IEEE Signal Processing Letters, 2017.
+[[5]](Improper-Signal-Subpsace-Detection/) Tanuj Hasija,  Christian Lameiro and Peter J. Schreier ,“Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,” IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
