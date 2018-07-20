@@ -16,7 +16,7 @@ This matlab package includes the following files:
 09. MultisetDataGen_CorrMeans_Script.m
 10. MultisetDataGen_CorrMeans.m
 11. ProdOfCoherence_WithBootstrap.m
-12. readme.txt
+12. README.md
 
 ############
 # Abstract #
