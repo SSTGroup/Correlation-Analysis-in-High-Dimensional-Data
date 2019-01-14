@@ -33,10 +33,10 @@ christian.lameiro@sst.upb.de
 
 [1] Y. Song, P. J. Schreier, D. Ramírez, and T. Hasija, “Canonical correlation analysis of high-dimensional data with very small sample support,” Signal Processing, vol. 128, pp. 449–458, 2016.
 
-[[2]](Cross-Validation/) C. Lameiro, and P. J. Schreier, “Cross-validation techniques for determining the number of correlated components between two data sets when the number of samples is very small,” Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
+[[2]](Techniques-two-data-sets/Cross-Validation/) C. Lameiro, and P. J. Schreier, “Cross-validation techniques for determining the number of correlated components between two data sets when the number of samples is very small,” Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
 
-[[3]](Bootstrap/) Tanuj Hasija, Yang Song, Peter J. Schreier and David Ramirez,“Bootstrap-based Detection of the Number of Signals Correlated across Multiple Data Sets,” Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
+[[3]](Techniques-multiple-data-sets/Bootstrap/) Tanuj Hasija, Yang Song, Peter J. Schreier and David Ramirez,“Bootstrap-based Detection of the Number of Signals Correlated across Multiple Data Sets,” Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
 
-[[4]](Sparse-CCA/) C. Lameiro, and P. J. Schreier, “A sparse CCA algorithm with application to model-order selection for small sample support,” Proc. IEEE Int. Conf. Acoustics, Speech and Signal Process., New Orleans, LA, USA, March 2017.
+[[4]](Techniques-two-data-sets/Sparse-CCA/) C. Lameiro, and P. J. Schreier, “A sparse CCA algorithm with application to model-order selection for small sample support,” Proc. IEEE Int. Conf. Acoustics, Speech and Signal Process., New Orleans, LA, USA, March 2017.
 
-[[5]](Improper-Signal-Subpsace-Detection/) Tanuj Hasija,  Christian Lameiro and Peter J. Schreier ,“Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,” IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
+[[5]](Techniques-one-data-set/Improper-Signal-Subpsace-Detection/) Tanuj Hasija,  Christian Lameiro and Peter J. Schreier ,“Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,” IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
