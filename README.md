@@ -39,9 +39,9 @@ christian.lameiro@sst.upb.de
 
 [[4]](Techniques-two-data-sets/Sparse-CCA/) C. Lameiro, and P. J. Schreier, “A sparse CCA algorithm with application to model-order selection for small sample support,” Proc. IEEE Int. Conf. Acoustics, Speech and Signal Process., New Orleans, LA, USA, March 2017.
 
-[[5]](Techniques-one-data-set/Improper-Signal-Subpsace-Detection/) Tanuj Hasija,  Christian Lameiro and Peter J. Schreier ,“Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,” IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
+[[5]](Techniques-one-data-set/Improper-Signal-Subpsace-Detection/) T. Hasija,  C. Lameiro and P. J. Schreier ,"Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,"�� IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
 
 [[6]](Techniques-multiple-data-sets/Complete-Model-Selection/) T. Marrinan, T. Hasija, C. Lameiro and P. J. Schreier,"Complete model selection in multiset canonical correlation analysis," Proc. 26th European Signal Processing Conference (EUSIPCO), Rome, Italy, 2018.
 
-[[7]](Techniques-multiple-data-sets/Complete-Model-Selection-Eigenvalue-Eigenvector-Test-Technique/) T. Hasija, T. Marrinan, C. Lameiro and P. J. Schreier,"Determining the Dimension and Structure of the Subspace Correlated Across Multiple Data Sets," Submitted.
+[[7]](Techniques-multiple-data-sets/Complete-Model-Selection-Eigenvalue-Eigenvector-Test-Technique/) T. Hasija, C. Lameiro, T. Marrinan,  and P. J. Schreier,"Determining the Dimension and Structure of the Subspace Correlated Across Multiple Data Sets," Submitted.
 

@@ -24,5 +24,5 @@ tim.marrinan@sst.upb.de
 
 [[2]](Complete-Model-Selection/) T. Marrinan, T. Hasija, C. Lameiro and P. J. Schreier,"Complete model selection in multiset canonical correlation analysis," Proc. 26th European Signal Processing Conference (EUSIPCO), Rome, Italy, 2018.
 
-[[3]](Complete-Model-Selection-Eigenvalue-Eigenvector-Test-Technique/) T. Hasija, T. Marrinan, C. Lameiro and P. J. Schreier,"Determining the Dimension and Structure of the Subspace Correlated Across Multiple Data Sets," Submitted.
+[[3]](Complete-Model-Selection-Eigenvalue-Eigenvector-Test-Technique/) T. Hasija, C. Lameiro, T. Marrinan, and P. J. Schreier,"Determining the Dimension and Structure of the Subspace Correlated Across Multiple Data Sets," Submitted.
 
