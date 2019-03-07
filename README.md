@@ -31,7 +31,7 @@ christian.lameiro@sst.upb.de
 # References #
 ##############
 
-[[1]](Techniques-two-data-sets/) Y. Song, P. J. Schreier, D. Ramirez, and T. Hasija, "Canonical correlation analysis of high-dimensional data with very small sample support,"Äù Signal Processing, vol. 128, pp. 449‚Äì458, 2016.
+[[1]](Techniques-two-data-sets/) Y. Song, P. J. Schreier, D. Ramirez, and T. Hasija, "Canonical correlation analysis of high-dimensional data with very small sample support," Signal Processing, vol. 128, pp. 449-458, 2016.
 
 [[2]](Techniques-two-data-sets/Cross-Validation/) C. Lameiro, and P. J. Schreier, "Cross-validation techniques for determining the number of correlated components between two data sets when the number of samples is very small," Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
 
