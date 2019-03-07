@@ -33,13 +33,13 @@ christian.lameiro@sst.upb.de
 
 [[1]](Techniques-two-data-sets/) Y. Song, P. J. Schreier, D. Ramirez, and T. Hasija, "Canonical correlation analysis of high-dimensional data with very small sample support,"Äù Signal Processing, vol. 128, pp. 449‚Äì458, 2016.
 
-[[2]](Techniques-two-data-sets/Cross-Validation/) C. Lameiro, and P. J. Schreier, "ÄúCross-validation techniques for determining the number of correlated components between two data sets when the number of samples is very small," Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
+[[2]](Techniques-two-data-sets/Cross-Validation/) C. Lameiro, and P. J. Schreier, "Cross-validation techniques for determining the number of correlated components between two data sets when the number of samples is very small," Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
 
-[[3]](Techniques-multiple-data-sets/Bootstrap/) Tanuj Hasija, Yang Song, Peter J. Schreier and David Ramirez, "ÄúBootstrap-based Detection of the Number of Signals Correlated across Multiple Data Sets," Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
+[[3]](Techniques-multiple-data-sets/Bootstrap/) Tanuj Hasija, Yang Song, Peter J. Schreier and David Ramirez, "Bootstrap-based Detection of the Number of Signals Correlated across Multiple Data Sets," Proc. Asilomar Conf. Signals Syst. Computers, Pacific Grove, CA, USA, November 2016.
 
 [[4]](Techniques-two-data-sets/Sparse-CCA/) C. Lameiro, and P. J. Schreier, "A sparse CCA algorithm with application to model-order selection for small sample support," Proc. IEEE Int. Conf. Acoustics, Speech and Signal Process., New Orleans, LA, USA, March 2017.
 
-[[5]](Techniques-one-data-set/Improper-Signal-Subpsace-Detection/) T. Hasija,  C. Lameiro and P. J. Schreier, "Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data,"Äù IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
+[[5]](Techniques-one-data-set/Improper-Signal-Subpsace-Detection/) T. Hasija,  C. Lameiro and P. J. Schreier, "Determining the Dimension of the Improper Signal Subspace in Complex-Valued Data," IEEE Signal Processing Letters, vol. 24, no. 11, pp. 1606-1610, Nov. 2017.
 
 [[6]](Techniques-multiple-data-sets/Complete-Model-Selection/) T. Marrinan, T. Hasija, C. Lameiro and P. J. Schreier,"Complete model selection in multiset canonical correlation analysis," Proc. 26th European Signal Processing Conference (EUSIPCO), Rome, Italy, 2018.
 
