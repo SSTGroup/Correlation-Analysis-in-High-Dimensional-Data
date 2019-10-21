@@ -98,7 +98,7 @@
 % ------------------------------------------------------------------------
 % CREATED:      14/01/2019 by Tanuj Hasija
 %
-% LAST EDITED:  14/01/2019 by Tanuj Hasija
+% LAST EDITED:  11/10/2019 by Tanuj Hasija
 %
 % NOTES:
 %
@@ -114,13 +114,14 @@ switch lower(scen)
         % per set
         tot_dims        = 4;        % # of sensors per set
         M               = 250;      % # of samples per set
-        num_iter = 1*1e1;           % # of trials for each data point
+        num_iter = 1*1e1;             % # of trials for each data point
         SNR_vec = [-10:3:15];       % SNR vector ranging from -10 to 15dB
         full_corr       = 1;        % # of signals correlated across all data sets
         corr_across     = [4 3];       % across how many data sets should each
         % additional signal be correlated?
         RealComp        = 'real';   % real/complex data
         % (only real is coded)
+        Distr = 'laplacian';        % gaussian or laplacian sources
         sigmad          = 1;       % variance of correlated signals
         sigmaf          = 1;        % variance of independent signals
         mixing          = 'orth';  % mixing matrix type ('orth'/'randn')
@@ -151,6 +152,7 @@ switch lower(scen)
         corr_std        = [.1 .1 .1 ]; % std of the correlation coefficients
         % of each signal for all data sets
         RealComp        = 'real';
+        Distr = 'gaussian';       
         sigmad          = 10;
         sigmaf          = 3;
         %sigmaN          = 10;
@@ -224,7 +226,7 @@ for snr =1:length(SNR_vec)
         % This generates data.
         [X,R,A,S] = MultisetDataGen_CorrMeans(subspace_dims,signum,x_corrs,...
             mixing,sigmad,sigmaf,sigmaN,color,n_sets,p,sigma_signals,M,...
-            MAcoeff,ARcoeff);
+            MAcoeff,ARcoeff,Distr);
         
         CorrTruth = zeros(n_combs, tot_dims);
         CorrTruth(:,1:signum) = p>0;

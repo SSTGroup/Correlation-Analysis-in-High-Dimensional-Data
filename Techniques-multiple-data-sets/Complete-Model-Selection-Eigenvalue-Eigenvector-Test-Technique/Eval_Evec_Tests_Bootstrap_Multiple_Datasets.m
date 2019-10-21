@@ -91,7 +91,7 @@
 % ------------------------------------------------------------------------
 % CREATED:      14/01/2019 by Tanuj Hasija
 %
-% LAST EDITED:  14/01/2019 by Tanuj Hasija
+% LAST EDITED:  11/10/2019 by Tanuj Hasija
 %
 % NOTES:
 %
@@ -206,7 +206,7 @@ for s=0:smax
     for b=1:B
         T2_star(b) =  sum(Lambda_star_matrix(s+1:s+P,b).^2);
         T2_null(b) = T2_star(b) - T;
-        if(abs(T) <= abs(T2_null(b)))
+        if((T) <= (T2_null(b)))
             Indicator(b) = 1;
         else
             Indicator(b) = 0;
@@ -246,7 +246,7 @@ for i=1:d_cap
         for b=1:B
             T2_star(b) = sum(U_star_matrix(dim1:dim2,i,b).^2);
             T2_null(b) = T2_star(b) - T;
-            if(abs(T) <= abs(T2_null(b)))
+            if((T) <= (T2_null(b)))
                 Indicator(b) = 1;
             else
                 Indicator(b) = 0;

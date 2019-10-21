@@ -93,7 +93,7 @@
 % ------------------------------------------------------------------------
 % CREATED:      14/01/2019 by Tanuj Hasija
 %
-% LAST EDITED:  14/01/2019 by Tanuj Hasija
+% LAST EDITED:  11/10/2019 by Tanuj Hasija
 %
 % NOTES:
 %
@@ -108,7 +108,7 @@ tot_dims        = 7;        % # of sensors per set
 M               = 350;      % # of samples per set
 num_iter = 1*1e1;           % # of trials for each data point
 SNR_vec = [-2.5,0,2.5];     % SNR vector ranging from -10 to 15dB
-rho_fix = 0.7;              % Correlation coefficients for all data
+rho_fix = 0.75;              % Correlation coefficients for all data
 % sets except first
 rho_vec = [.88,.8:-0.1:0.1]; % Correlation coefficient vector for
 % first data set
@@ -117,6 +117,7 @@ corr_across     = [];       % across how many data sets should each
 % additional signal be correlated?
 RealComp        = 'real';   % real/complex data
 % (only real is coded)
+Distr = 'laplacian';        % gaussian or laplacian sources
 sigmad          = 1;       % variance of correlated signals
 sigmaf          = 1;        % variance of independent signals
 mixing          = 'orth';  % mixing matrix type ('orth'/'randn')
@@ -177,7 +178,7 @@ for snr =1:length(SNR_vec)
             % This generates data.
             [X,R,A,S] = MultisetDataGen_CorrMeans(subspace_dims,signum,x_corrs,...
                 mixing,sigmad,sigmaf,sigmaN,color,n_sets,p,sigma_signals,M,...
-                MAcoeff,ARcoeff);
+                MAcoeff,ARcoeff,Distr);
             
             CorrTruth = zeros(n_combs, tot_dims);
             CorrTruth(:,1:signum) = p>0;

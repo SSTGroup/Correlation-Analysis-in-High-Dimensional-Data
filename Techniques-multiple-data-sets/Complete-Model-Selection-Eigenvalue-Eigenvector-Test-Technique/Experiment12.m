@@ -135,7 +135,7 @@
 % ------------------------------------------------------------------------
 % CREATED:      14/01/2019 by Tanuj Hasija
 %
-% LAST EDITED:  14/01/2019 by Tanuj Hasija
+% LAST EDITED:  11/10/2019 by Tanuj Hasija
 %
 % NOTES:
 %
@@ -158,6 +158,7 @@ switch lower(scen)
         % additional signal be correlated?
         RealComp        = 'real';   % real/complex data
         % (only real is coded)
+        Distr = 'gaussian';        % gaussian or laplacian sources
         sigmad          = 1;       % variance of correlated signals
         sigmaf          = 1;        % variance of independent signals
         mixing          = 'orth';  % mixing matrix type ('orth'/'randn')
@@ -183,6 +184,7 @@ switch lower(scen)
         % additional signal be correlated?
         RealComp        = 'real';   % real/complex data
         % (only real is coded)
+        Distr = 'gaussian';        % gaussian or laplacian sources
         sigmad          = 1;       % variance of correlated signals
         sigmaf          = 1;        % variance of independent signals
         mixing          = 'orth';  % mixing matrix type ('orth'/'randn')
@@ -212,6 +214,7 @@ switch lower(scen)
         corr_std        = [.1 .1 .1 ]; % std of the correlation coefficients
         % of each signal for all data sets
         RealComp        = 'real';
+        Distr = 'laplacian';        % gaussian or laplacian sources
         sigmad          = 10;
         sigmaf          = 3;
         %sigmaN          = 10;
@@ -291,7 +294,7 @@ for snr =1:length(SNR_vec)
         % This generates data.
         [X,R,A,S] = MultisetDataGen_CorrMeans(subspace_dims,signum,x_corrs,...
             mixing,sigmad,sigmaf,sigmaN,color,n_sets,p,sigma_signals,M,...
-            MAcoeff,ARcoeff);
+            MAcoeff,ARcoeff,Distr);
         
         CorrTruth = zeros(n_combs, tot_dims);
         CorrTruth(:,1:signum) = p>0;
@@ -409,7 +412,7 @@ plot(SNR_vec,d_all_func_kpd,'c+-','markersize',12,'Linewidth',2);
 plot(SNR_vec,d_all_func_mht,'m.--','markersize',12,'Linewidth',2); hold on;
 plot(SNR_vec,d_all_func_bt,'gs-','markersize',12,'Linewidth',2);
 a = xlabel('SNR (dB)','fontsize',20,'FontName','Times New Roman');
-b = ylabel('Mean value of $\hat{d}_all$','fontsize',20,'FontName','Times New Roman');
+b = ylabel('Mean value of $\hat{d}_\textrm{all}$','fontsize',20,'FontName','Times New Roman');
 c = legend('ITC MDL [16]','Max-Min [17]','[19]','mCCA-KPD [20]','mCCA-HT [23]','Proposed');
 set(a,'interpreter','latex');
 set(b,'interpreter','latex');

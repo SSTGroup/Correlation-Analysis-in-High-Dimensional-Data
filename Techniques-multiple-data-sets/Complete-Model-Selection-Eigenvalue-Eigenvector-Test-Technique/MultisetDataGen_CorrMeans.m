@@ -1,5 +1,5 @@
 %   File: MultisetDataGen_CorrMeans.m
-%   Copyright (c) <2017> <University of Paderborn>
+%   Copyright (c) <2019> <University of Paderborn>
 %   Permission is hereby granted, free of charge, to any person
 %   obtaining a copy of this software and associated documentation
 %   files (the "Software"), to deal in the Software without restriction,
@@ -72,7 +72,8 @@
 %                   The variance of the noise components.
 %
 % 'color'           String.
-%                   Only 'white' is coded at the moment. To implement 
+%                   'white' for additive white noise and 'color' for colored
+%                   noise
 %
 % 'n_sets'          Scalar.
 %                   # of data sets to generate.
@@ -98,6 +99,10 @@
 % 'ARcoeff'         Vector of size 'degree of AR dependency' x 1.
 %                   Auto-regressive coefficients for colored noise.
 %                   Se 'help filter' for more details.
+%
+% 'Distr'           String.
+%                   'gaussian' or 'laplacian'. Specifies the distribution
+%                   of the signal components
 %
 % OUTPUTS:
 %
@@ -134,7 +139,8 @@
 % ------------------------------------------------------------------------
 % CREATED:      22/08/2017 by Tim Marrinan
 %
-% LAST EDITED:  17/01/2018 by Tim Marrinan
+% LAST EDITED:  11/10/2019 by Tanuj Hasija
+%               17/01/2018 by Tim Marrinan
 %               16/01/2018 by Tim Marrinan
 %               15/12/2017 by Tim Marrinan
 %               
@@ -148,7 +154,7 @@
 % ------------------------------------------------------------------------
 function [X,R,A,S] = MultisetDataGen_CorrMeans(subspace_dims,signum,...
     x_corrs,mixing,sigmad,sigmaf,sigmaN,color,n_sets,p,sigma_signals,...
-    M,MAcoeff,ARcoeff)
+    M,MAcoeff,ARcoeff,Distr)
 
 %% Generate mixing matrices
 A = cell(n_sets,1);
@@ -190,7 +196,19 @@ end
 %% Generate M realizations of each data set along with Gaussian noise.
 S = cell(n_sets,1);
 N = cell(n_sets,1);
-fullS=sqrtm(R)*randn(n_sets*signum,M);
+switch lower(Distr)
+    case 'gaussian'
+        fullS=sqrtm(R)*randn(n_sets*signum,M);
+    case 'laplacian'
+        signum_aug = n_sets*signum;
+        fullS = zeros(signum_aug,M); 
+        for m=1:M
+        fullS(:,m)=mvlaprnd(signum_aug,zeros(signum_aug,1),R);
+        end
+    otherwise
+        error('Unknown source distribution');
+end
+
 for i = 1 : n_sets
     S{i}  = fullS((i-1)*signum+1:i*signum,:); % Realizations of S{i}
     N{i} = sqrt(sigmaN)*randn(subspace_dims(i),M); % Noise in the ith channel
