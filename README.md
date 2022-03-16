@@ -43,5 +43,7 @@ christian.lameiro@sst.upb.de
 
 [[6]](Techniques-multiple-data-sets/Complete-Model-Selection/) T. Marrinan, T. Hasija, C. Lameiro and P. J. Schreier,"Complete model selection in multiset canonical correlation analysis," Proc. 26th European Signal Processing Conference (EUSIPCO), Rome, Italy, 2018.
 
-[[7]](Techniques-multiple-data-sets/Complete-Model-Selection-Eigenvalue-Eigenvector-Test-Technique/) T. Hasija, C. Lameiro, T. Marrinan,  and P. J. Schreier,"Determining the Dimension and Structure of the Subspace Correlated Across Multiple Data Sets," Submitted.
+[[7]](Techniques-multiple-data-sets/Complete-Model-Selection-Eigenvalue-Eigenvector-Test-Technique/) T. Hasija, C. Lameiro, T. Marrinan,  and P. J. Schreier,"Determining the Dimension and Structure of the Subspace Correlated Across Multiple Data Sets," Signal Processing, Volume 176, 2020.
+
+[[8]](Techniques-multiple-data-sets/Joint-Reduced-Rank-mCCA-Technique/) T. Hasija and T. Marrinan,"A GLRT for estimating the number of correlated components in sample-poor mCCA," Submitted.
 
