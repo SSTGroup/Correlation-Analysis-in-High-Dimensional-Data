@@ -10,12 +10,7 @@ This matlab package includes the following files:
 05. MultisetDataGen_CorrMeans.m
 06. Eval_Evec_Tests_Bootstrap_Multiple_Datasets.m
 06. MCCA_CompleteModelSelection.m
-07. PCM_Bootstrap_Multiple_Datasets.m
-08. Max_Min_Multiple_Datasets.m
-09. ITC_MDL_Wu_Multiple_Datasets.m
-10. MCCA_KPD.m
 11. mcca.m
-12. data_edit_index.m
 13. README.md
 
 ############
@@ -28,7 +23,7 @@ number of correlated components, we are able to provide high-accuracy estimates 
 ##############
 # File Usage #
 ##############
-Experiment12.m - Runs experiments 1 and 2 in the paper. The parameters of the two experiments are set automatically in 'scen1' and 'scen2'. To run experiments with different settings modify the parameters of the 'custom' scenario as desired.  
+Experiment.m - Runs experiment in the paper. The parameters are set automatically in 'scen1'. To run experiments with different settings modify the parameters of the 'custom' scenario as desired.  
 
 In all the above files, the variables 'num_iter', 'verbose', etc can be modified to control for how many iterations, and what kind of information is printed while the experiments are run. Moreover, in 'custom' scenario, a correlation structure can be automatically generated for correlations across a specified number of data sets.
 
