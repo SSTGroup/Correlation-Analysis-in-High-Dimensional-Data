@@ -94,7 +94,10 @@
 %
 % DEPENDENCIES:
 %
-% N/A
+% [1] maxmin.m
+%
+%       Not included within.
+%       Written by Yang Song, see file for documentation.
 %
 % REFERENCES:
 %
@@ -178,48 +181,7 @@ end
 for i = 1 : n_combs
     % Compute the pairwise order correlation with maxmin PCA-CCA
     % See reference [2] for details. Originally coded by Yang Song.
-    %     n_p = m(x_corrs(i,1));
-    %     n_q = m(x_corrs(i,2));
-    %     smin = zeros(n_p,n_q);
-    %     for r1 = 1:n_p
-    %         for r2 = 1:n_q
-    %             r = min(r1,r2);
-    %             C = zeros(r,1);
-    %             T = zeros(r,1);
-    %             ga = svd(U{x_corrs(i,1)}'*U{x_corrs(i,2)});
-    %             for r3 = 0:r-1
-    %                 switch lower(ITC)
-    %                     case 'ht'
-    %                         C(r3+1) = -(M-r3-1/2*(r1+r2+1)+sum(ga(1:r3).^-2))...
-    %                             *log(prod(1-ga(r3+1:r).^2));
-    %                         T(r3+1) = chi2inv(1-Pfa,(r1-r3)*(r2-r3));
-    %                     case 'mdl'
-    %                         C(r3+1) = -(M-r3-1/2*(r1+r2+1)+sum(ga(1:r3).^-2))...
-    %                             *log(prod(1-ga(r3+1:r).^2));
-    %                         T(r3+1) = (M-r3-1/2*(r1+r2+1)+sum(ga(1:r3).^-2))...
-    %                             /M*log(M)*(r1-r3)*(r2-r3); % MDL threshold
-    %                     case 'aic'
-    %                         C(r3+1) = -(M-r3-1/2*(r1+r2+1)+sum(ga(1:r3).^-2))...
-    %                             *log(prod(1-ga(r3+1:r).^2));
-    %                         T(r3+1) = (M-r3-1/2*(r1+r2+1)+sum(ga(1:r3).^-2))...
-    %                             /M*2*(r1-r3)*(r2-r3); % AIC threshold
-    %                 end
-    %             end
-    %             IDX = find(C-T<0);
-    %             if isempty(IDX)
-    %                 smin(r1,r2) = r;
-    %             else
-    %                 smin(r1,r2) = IDX(1)-1;
-    %             end
-    %         end
-    %     end
-    %     d = max(max(smin));
-    switch lower(ITC)
-        case 'ht'
-            d = maxmin(U{x_corrs(i,1)},U{x_corrs(i,2)},M,Pfa,'real',[5 5],m(x_corrs(i,1)),ITC);
-        case 'itc'
-            d = IC_maxmin(U{x_corrs(i,1)},U{x_corrs(i,2)},M,'mdl','real',m(x_corrs(i,1)));
-    end
+    d = maxmin(U{x_corrs(i,1)},U{x_corrs(i,2)},M,Pfa,'real',1,m(x_corrs(i,1)),ITC);
     
     % Find the extracted sources with the largest inner products
     A = on{x_corrs(i,1)};

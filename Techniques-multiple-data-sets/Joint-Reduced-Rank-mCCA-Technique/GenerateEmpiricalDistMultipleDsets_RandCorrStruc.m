@@ -37,6 +37,10 @@
 % ##   about bugs. Please reference the Software in your publications
 % ##   if it was used for them.
 % ##
+% OVERVIEW:  This function generates an approximate distribution of the
+% test statistic for estimating the number of correlated components in 
+% T. Hasija and T. Marrinan,"A GLRT for estimating the number of correlated 
+% components in sample-poor mCCA," Submitted.
 % ##
 % ##   Author: Tanuj Hasija
 % ##   Created: Tanuj Hasija 01/02/2022

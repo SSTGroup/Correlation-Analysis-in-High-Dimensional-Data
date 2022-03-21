@@ -41,6 +41,13 @@
 % ##   Author: Tanuj Hasija
 % ##   Created: Tanuj Hasija 01/02/2022
 % ##   Edited: Tanuj Hasija 01/02/2022
+%
+% ##   OVERVIEW:
+%
+% This function implements the technique for estimating the number of
+% correlated components from "A GLRT for estimating the number of correlated 
+% components in sample-poor mCCA," by Tanuj Hasija and Timothy Marrinan, Submitted" 
+%
 % ##   Dependencies:
 % ##
 % ##   [1] mcca.m

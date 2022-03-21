@@ -38,12 +38,64 @@
 % ##   if it was used for them.
 % ##
 % ##
-% ##   Author: Tanuj Hasija
-% ##   Created: Tanuj Hasija 07/01/2018
-% ##   Edited: Tanuj Hasija 07/01/2018
-% ##   Dependencies:
-% ##
-% ## ----------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% OVERVIEW:        This function implements Algorithm 1 and 2 of [1]
+%
+% ------------------------------------------------------------------------
+% SYNTAX:
+%
+% [d_cap,U_struc] = Eval_Evec_Tests_Bootstrap_Multiple_Datasets(X_cell, P_fa_eval, P_fa_evec, B)
+%
+% INPUTS:
+%
+% 'X_cell'          Cell array of size P x 1.
+%                   The pth cell contains a matrix of size n_p x M.  It is
+%                   the matrix of observations of the pth data channel.
+%
+% 'P_fa_eval'       Probability of false alarm for hypothesis testing for eigenvalue
+%                   test
+% 'P_fa_evec'       Probability of false alarm for hypothesis testing for
+%                   eigenvector test
+% 'B'               Number of bootstrap iterations
+%
+% OUTPUTS:
+%
+% 'd_cap'           Estimated number of correlated components
+%
+% 'U_struc'         Matrix of size d_cap * P.
+%                   Rows correspond to the signal components and Columns
+%                   contain the indices of the data sets
+%
+%
+% DEPENDENCIES:
+%
+% [1] hypothesis_testing_bt_eval_aug_coh_matrix.m
+%
+%       Included within.
+%       Written by Tanuj Hasija.
+%
+% [2] hypothesis_testing_bt_evec_aug_coh_matrix.m
+%
+%       Included within.
+%       Written by Tanuj Hasija.
+%
+%
+% REFERENCES:
+%
+% This method:
+% [1]   T. Hasija, T. Marrinan, C. Lameiro, and P. J. Schreier, “Determining the
+% dimension and structure of the subspace correlated across multiple data
+% sets,” Signal Processing, p. 107613, 2020.
+%
+% ------------------------------------------------------------------------
+% CREATED:      14/01/2019 by Tanuj Hasija
+%
+% LAST EDITED:  11/10/2019 by Tanuj Hasija
+%
+% NOTES:
+%
+% ------------------------------------------------------------------------
+
 
 function [d_cap,U_struc] = Eval_Evec_Tests_Bootstrap_Multiple_Datasets(X_cell, P_fa_eval, P_fa_evec, B)
 
@@ -67,11 +119,6 @@ X_aug = zeros(N*L,M);
 Rxx_mH{L} = [];
 
 for l=1:L
-    %     [U_temp,~,V_temp] = svd(X_cell{l},'econ');
-    %     U_cell{l} = U_temp;
-    %     V_cell{l} = V_temp;
-    
-%     X_aug = [X_aug;X_cell{l}];
     X_aug((l-1)*N+1:l*N,:) = X_cell{l}; 
     Rxx_mH{l} = sqrtm(inv(X_cell{l}*X_cell{l}.'/M));
     
@@ -163,6 +210,10 @@ for k=0:sum(tot_dim)-L
     if(p_value >= P_fa_eval)
         k_cap = k;
         break;
+    else
+        if (k==(tot_dim/L))
+            k_cap = tot_dim/L;
+        end
     end
 end
 end

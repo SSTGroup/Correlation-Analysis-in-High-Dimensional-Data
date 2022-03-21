@@ -6,11 +6,12 @@ This matlab package contains files implementing the method for estimating the nu
 
 This matlab package includes the following files:
 01. Experiment.m
-04. CorrelationStructureGen.m
-05. MultisetDataGen_CorrMeans.m
-06. Eval_Evec_Tests_Bootstrap_Multiple_Datasets.m
-06. MCCA_CompleteModelSelection.m
-11. mcca.m
+02. CorrelationStructureGen.m
+03. MultisetDataGen_CorrMeans.m
+04. Eval_Evec_Tests_Bootstrap_Multiple_Datasets.m
+05. Num_PCA_components
+05. MCCA_CompleteModelSelection.m
+06. mcca.m
 13. README.md
 
 ############
@@ -23,9 +24,8 @@ number of correlated components, we are able to provide high-accuracy estimates 
 ##############
 # File Usage #
 ##############
-Experiment.m - Runs experiment in the paper. The parameters are set automatically in 'scen1'. To run experiments with different settings modify the parameters of the 'custom' scenario as desired.  
 
-In all the above files, the variables 'num_iter', 'verbose', etc can be modified to control for how many iterations, and what kind of information is printed while the experiments are run. Moreover, in 'custom' scenario, a correlation structure can be automatically generated for correlations across a specified number of data sets.
+Experiment.m - Runs experiment in the paper. The parameters are set automatically in 'scen1'. To run experiments with different settings and correlation structure modify the parameters of the 'custom' scenario as desired. The variable 'num_iter' can be modified to control for how many iterations the experiments are run. 
 
 ###########
 # Contact #

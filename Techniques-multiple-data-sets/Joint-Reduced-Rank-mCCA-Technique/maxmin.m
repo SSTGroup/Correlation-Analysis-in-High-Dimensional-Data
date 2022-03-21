@@ -40,7 +40,7 @@
 % ##
 % ##   Author: Yang Song
 
-function [d, r1Est, r2Est] = maxmin(Vx,Vy,M,Pfa,RealComp,f,rmax,ITC)
+function [d, r1Est, r2Est] = maxmin(Vx,Vy,M,Pfa,RealComp,equal_range,rmax,ITC)
 % IC_maxmin.m - Hypothesis test based max-min method
 %
 %
@@ -51,8 +51,8 @@ function [d, r1Est, r2Est] = maxmin(Vx,Vy,M,Pfa,RealComp,f,rmax,ITC)
 % M:         number of samples
 % RealComp: 'real' for real-valued data; 
 %           'comp' for complex-valued data
-% f:         f(1) is the number of independent signals in X
-%            f(2) is the number of independent signals in Y
+% equal_range:         1 if PCA ranks for both data sets are assumed equal and 0 otherwise
+%                        (saves computaion time without siginificant performance loss)
 % rmax       {r1,r2} = 1,...,rmax
 %             r1: the rank PCA keeps in X
 %             r2: the rank PCA keeps in Y
@@ -72,8 +72,11 @@ function [d, r1Est, r2Est] = maxmin(Vx,Vy,M,Pfa,RealComp,f,rmax,ITC)
 % r1Est:     the optimum rank that PCA should keep for X
 % r2Est:     the optimum rank that PCA should keep for Y
 %
+% Edited 
+% 01/22/2022  Tanuj Hasija 
+
 for r1 = 1:rmax
-    if f(1)==f(2), r2range  = r1; else r2range = 1:rmax; end
+    if (equal_range), r2range  = r1; else, r2range = 1:rmax; end
     for r2 = r2range
         r = min(r1,r2);
         C = zeros(r,1);

@@ -60,7 +60,7 @@
 %       Not included within.
 %       Written by Tim Marrinan, see file for documentation.
 %
-% [3] HybridjointEVD.m
+% [3] Eval_Evec_Tests_Bootstrap_Multiple_Datasets.m
 %
 %       Not included within.
 %       Written by Tanuj Hasija, see file for documentation.
@@ -71,6 +71,11 @@
 %       Written by Tim Marrinan, see file for documentation.
 %
 % [5] jRRmCCA.m
+%
+%       Not included within.
+%       Written by Tanuj Hasija, see file for documentation.
+%
+% [6] Num_PCA_components.m
 %
 %       Not included within.
 %       Written by Tanuj Hasija, see file for documentation.
@@ -147,23 +152,28 @@ switch lower(scen)
         % matrix
     case 'custom'
         % Use this scene to play around
-        n_sets          = 4;
-        signum          = 3;
-        tot_dims        = 4;
-        M               = 1000;
-        full_corr       = 3;
-        corr_across     = [];
+        n_sets          = 10;
+        signum          = 10;
+        tot_dims        = 30;
+        M               = 200;
+        SNR_vec         = [-10:5:10];
+        num_iter        = 1e0;
+        full_corr       = 0;
+        corr_across     = [ 9 8 6];
         corr_means      = [.9 .8 .6];
-        corr_std        = [.05 .05 .05];
+        corr_std        = [.01 .01 .01];
         RealComp        = 'real';
-        sigmad          = 10;
-        sigmaf          = 3;
-        sigmaN          = 10;
+        sigmad          = 2;
+        sigmaf          = 5;
+        add_weak_uncorr_sig= 0;
+        sigmafweak      = sigmad/2;  
+        num_signumweak  = 1;       
         mixing          = 'randn';
         color           = 'white';
         MAcoeff         = 1;
         ARcoeff         = 1;
         maxIters        = 99;
+    otherwise   
         error('Unknown scenario');
 end
 
@@ -239,12 +249,12 @@ for snr =1:length(SNR_vec)
         
         % Run the hybrid jointEVD
         % ----------------------------------------------------------------
-        % PCA using Nadakuditi et.al [5] 
+        % PCA using [5] 
         for l=1:n_sets
             Rxx = X{l}*X{l}.'/M;
             L = eig(Rxx);
             L = sort(L,'descend');
-            [numcomp(l),~] = Nadakuditi(L,subspace_dims(l),M,1);
+            [numcomp(l),~] = Num_PCA_components(L,subspace_dims(l),M,1);
         end
         r_hjevd(iter) = round(mean(numcomp));
         
