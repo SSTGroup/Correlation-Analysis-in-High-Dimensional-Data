@@ -10,9 +10,12 @@ This matlab package includes the following files:
 03. MultisetDataGen_CorrMeans.m
 04. Eval_Evec_Tests_Bootstrap_Multiple_Datasets.m
 05. Num_PCA_components
-05. MCCA_CompleteModelSelection.m
-06. mcca.m
-13. README.md
+06. MCCA_CompleteModelSelection.m
+07. mcca.m
+08. maxmin.m
+09. jRRmCCA.m
+10. Threshold_sam_poor_n_sets10M200rmax15pfa0.01MCtrials500.mat
+11. README.md
 
 ############
 # Abstract #
